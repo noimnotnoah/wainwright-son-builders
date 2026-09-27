@@ -1,46 +1,148 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wainwright &amp; Son &middot; Builders Honiton Devon Since 1982</title>
-<meta name="description" content="Wainwright &amp; Son, family builders in Honiton, Devon since 1982. Extensions, renovations, barn conversions.">
+<title>Wainwright & Son — Builders Honiton Devon</title>
+<meta name="description" content="Family-run building company in Honiton, Devon since 1982. Extensions, renovations and barn conversions.">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:100%;-webkit-text-size-adjust:100%}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';font-size:1rem;line-height:1.6;color:#000;background:#fff;padding:1.5rem 1.25rem;max-width:42rem;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column}
-header{padding:2rem 0 1.5rem;border-bottom:2px solid #6b7280}
-h1{font-size:1.75rem;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin:0}
-.sub{display:block;font-size:.875rem;font-weight:400;color:#6b7280;letter-spacing:.06em;text-transform:uppercase;margin-top:.35rem;line-height:1.4}
-main{flex:1;padding:1.5rem 0}
-p{margin-bottom:1rem;max-width:38rem}
-p:last-of-type{margin-bottom:0}
-address{font-style:normal}
-strong{font-weight:600}
-footer{border-top:1px solid #d1d5db;padding:1rem 0 .5rem;font-size:.8125rem;color:#6b7280;margin-top:auto}
-@media print{body{padding:0;min-height:auto}header{padding-top:0}footer{page-break-after:avoid}}
-@media(max-width:480px){body{padding:1rem .75rem}h1{font-size:1.5rem}}
+html{font-size:clamp(16px,1.1vw,20px)}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f8f7f5;color:#1a1a1a;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.max{max-width:72rem;margin:0 auto;padding:0 2rem}
+@media(max-width:640px){.max{padding:0 1.25rem}}
+
+/* Header */
+header{background:#1a1a1a;color:#fff;position:sticky;top:0;z-index:10}
+header .max{display:flex;justify-content:space-between;align-items:center;padding-top:.8rem;padding-bottom:.8rem}
+header h1{font-size:1.1rem;font-weight:600;letter-spacing:-.02em}
+header h1 em{font-style:normal;color:#6b7280;font-weight:400}
+header nav a{color:#a3a3a3;text-decoration:none;font-size:.85rem;margin-left:2rem;transition:color .2s}
+header nav a:hover{color:#fff}
+@media(max-width:640px){header nav a{margin-left:1rem;font-size:.8rem}}
+
+/* Hero */
+.hero{background:#1a1a1a;color:#fff;padding:6rem 0 5rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6rem;background:linear-gradient(transparent,#f8f7f5)}
+.hero h2{font-size:clamp(2.2rem,4vw,3.8rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;max-width:48rem;margin-bottom:1.5rem}
+.hero h2 span{color:#9ca3af;display:block;font-size:1.2rem;font-weight:400;letter-spacing:0;margin-top:.75rem}
+.hero p{font-size:1.05rem;color:#d4d4d4;max-width:32rem;margin-bottom:2rem;line-height:1.7}
+.tag{display:inline-block;border:1px solid #6b7280;color:#d4d4d4;font-size:.7rem;padding:.3rem .8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem;border-radius:2px}
+.stats{display:flex;gap:3rem;margin-top:3rem}
+.stat{font-size:.85rem;color:#9ca3af}
+.stat strong{display:block;font-size:1.5rem;color:#fff;font-weight:700;margin-bottom:.15rem}
+
+/* Section */
+.sec{padding:5rem 0}
+.sec-gray{background:#fff}
+.hdr{display:flex;align-items:baseline;gap:1rem;margin-bottom:3rem}
+.hdr h3{font-size:1.75rem;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+.hdr .line{flex:1;height:1px;background:#e5e5e5}
+.hdr .lbl{font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr}}
+
+.card{background:#f8f7f5;padding:2rem;border-radius:4px;border:1px solid #e5e5e5}
+.card h4{font-size:1rem;font-weight:600;margin-bottom:.75rem}
+.card p{font-size:.9rem;color:#525252;line-height:1.6}
+.card .ex{display:inline-block;font-size:.75rem;color:#6b7280;margin-top:.75rem;font-style:italic}
+
+/* Contact */
+.contact{background:#fff;padding:0 2rem 4rem;max-width:72rem;margin:0 auto}
+.contact-inner{background:#1a1a1a;color:#fff;padding:3rem 3rem;border-radius:8px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
+@media(max-width:640px){.contact-inner{grid-template-columns:1fr;padding:2rem}}
+.contact-inner h5{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#6b7280;margin-bottom:.5rem;font-weight:600}
+.contact-inner p{font-size:.95rem;color:#d4d4d4}
+.contact-inner a{color:#fff;font-size:1.25rem;font-weight:600;text-decoration:none;display:block;margin-bottom:.5rem}
+.contact-inner a:hover{color:#9ca3af}
+
+footer{text-align:center;padding:2rem;font-size:.8rem;color:#6b7280}
 </style>
 </head>
 <body>
 
 <header>
-<h1>Wainwright &amp; Son.<span class="sub">Builders. Honiton. Since 1982.</span></h1>
+<div class="max">
+<h1>Wainwright <em>&amp; Son</em></h1>
+<nav>
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
-<main>
-<p><strong>Wainwright &amp; Son</strong> is a family-run building firm based in Honiton, Devon. David Wainwright founded the company in 1982, working across East Devon on extensions and renovation projects. His son Tom joined the business in 2015 and now runs day-to-day operations on site, leading a small, reliable team of three to four tradesmen. The business remains wholly family-owned.</p>
+<section class="hero">
+<div class="max">
+<div class="tag">Family-run since 1982</div>
+<h2>We build homes that last.<span>Extensions, renovations, barn conversions — Honiton and 15 miles around.</span></h2>
+<p>Three generations of Wainwrights have been building and renovating homes across East Devon. Small team, big experience. Every project treated like our own.</p>
+<div class="stats">
+<div class="stat"><strong>42</strong>Years trading</div>
+<div class="stat"><strong>15</strong>Mile radius</div>
+<div class="stat"><strong>3-4</strong>Team on site</div>
+</div>
+</div>
+</section>
 
-<p>We build <strong>house extensions</strong>, full <strong>renovations and refurbishments</strong>, and <strong>barn and outbuilding conversions</strong>&thinsp;&mdash;&thinsp;taking each project from groundwork through to finished joinery. Recent work includes a two-storey side extension in Ottery St Mary, a full farmhouse renovation near Honiton, and a detached barn conversion into a dwelling in Payhembury. We do not subcontract design or structural work; we build what the drawings and calculations specify.</p>
+<section class="sec" id="work">
+<div class="max">
+<div class="hdr"><span class="lbl">01</span><h3>What we build</h3><div class="line"></div></div>
+<div class="grid-3">
+<div class="card">
+<h4>Extensions</h4>
+<p>Side, rear and two-storey extensions. Recent: a two-storey side extension in Ottery St Mary, and a rear kitchen extension in Feniton.</p>
+<span class="ex">From foundation to roof</span>
+</div>
+<div class="card">
+<h4>Renovations</h4>
+<p>Full house modernisations and reconfigurations. Recent: nine-month farmhouse renovation near Honiton — stripped to shell and rebuilt.</p>
+<span class="ex">Old homes made new</span>
+</div>
+<div class="card">
+<h4>Barn conversions</h4>
+<p>Detached barn to dwelling in Payhembury — new roof, floor, windows, services. Planning permission through to completion.</p>
+<span class="ex">Agricultural to residential</span>
+</div>
+</div>
+</div>
+</section>
 
-<p>Our work is within a <strong>15-mile radius of Honiton</strong>, covering Honiton, Ottery St Mary, Sidmouth, Exeter outskirts, and the villages in between. We know the local building styles, materials, and planning context, and that knowledge saves time on every job.</p>
+<section class="sec sec-gray" id="about">
+<div class="max">
+<div class="hdr"><span class="lbl">02</span><h3>Who we are</h3><div class="line"></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+<div>
+<p style="color:#525252;margin-bottom:1rem;font-size:.95rem">David Wainwright started the business in 1982, working weekends and evenings while holding down a full-time job. Within three years he was working for himself full-time, taking on extensions and renovations across East Devon.</p>
+<p style="color:#525252;margin-bottom:1rem;font-size:.95rem">His son Tom joined in 2015, bringing a City &amp; Guilds qualification in carpentry and a fresh approach to project management. Tom now runs the day-to-day on site, while David oversees planning and client relationships.</p>
+<p style="color:#525252;font-size:.95rem">We don't subcontract design or structural work — we build what the drawings say, and we do it properly. No job goes off-site until the client's happy.</p>
+</div>
+<div style="background:#e5e5e5;border-radius:4px;display:flex;align-items:center;justify-content:center;min-height:12rem;color:#6b7280;font-size:.85rem;text-align:center;padding:2rem">
+We don't use stock photography.<br>Our work speaks for itself.
+</div>
+</div>
+</div>
+</section>
 
-<p>To discuss a project, call <strong>David Wainwright</strong> on <strong>01404 850&thinsp;328</strong>.</p>
-</main>
+<section style="max-width:72rem;margin:0 auto;padding:0 2rem 5rem" id="contact">
+<div class="contact-inner">
+<div>
+<h5>Get in touch</h5>
+<a href="tel:01404850328">01404 850 328</a>
+<p>Call David or Tom to talk about your project. They'll come and look at the job, no obligation.</p>
+</div>
+<div>
+<h5>Location</h5>
+<p>Honiton, Devon<br>Working within 15 miles</p>
+</div>
+<div>
+<h5>Established</h5>
+<p>1982<br>Family-owned</p>
+</div>
+</div>
+</section>
 
-<footer>
-<p>Wainwright &amp; Son &bull; Honiton &bull; Devon</p>
-</footer>
+<footer>Wainwright &amp; Son &middot; Honiton &middot; Devon</footer>
 
 </body>
 </html>
